@@ -29,8 +29,7 @@ class IntVector
 		IntVector(int size, int value = 0);
 		// A copy constructor.
 		IntVector(const IntVector& vec);
-		// A destructor.
-		~IntVector();
+
 
 		// Returns the element at position 'index'.
 		// If index is out of range, the function throws
