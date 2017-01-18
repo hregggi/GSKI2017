@@ -7,6 +7,7 @@ using namespace std;
 
 IntVector::IntVector() {
     array = new int[INITIAL_CAPACITY];
+    count=0;
     capacity = INITIAL_CAPACITY;
 }
 
@@ -14,6 +15,7 @@ IntVector::IntVector(int size, int value) {
     capacity=INITIAL_CAPACITY;
     array = new int[INITIAL_CAPACITY];
     count = 0;
+
     for(int i=0; i<size; i++){
         push_back(value);
     }
@@ -36,8 +38,8 @@ IntVector::~IntVector() {
 // Public member functions
 
 void IntVector::push_back(int elem) {
+    array[count]=elem;
     count++;
-    array[count-1]=elem;
     return;
 }
 
