@@ -40,11 +40,28 @@ IntVector::~IntVector() {
 void IntVector::push_back(int elem) {
     array[count]=elem;
     count++;
+
+    if(count>=capacity){
+        capacity*=2;
+
+        int* tmp;
+        tmp = new int[capacity];
+
+        for(int i=0; i<count; i++){
+            tmp[i]=array[i];
+        }
+
+        delete[] array;
+        array=tmp;
+        delete[] tmp;
+
+    }
+
     return;
+
 }
 
 void IntVector::insert(int index, int elem) {
-    int temp;
 
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
@@ -64,6 +81,7 @@ void IntVector::insert(int index, int elem) {
 int IntVector::at(int index) const {
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
+        return array[0];
     }
     return array[index];
 }
