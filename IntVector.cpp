@@ -58,7 +58,6 @@ void IntVector::push_back(int elem) {
     }
 
     return;
-
 }
 
 void IntVector::insert(int index, int elem) {
