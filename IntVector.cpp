@@ -12,7 +12,8 @@ IntVector::IntVector() {
 
 IntVector::IntVector(int size, int value) {
     capacity=INITIAL_CAPACITY;
-
+    array = new int[INITIAL_CAPACITY];
+    count = 0;
     for(int i=0; i<size; i++){
         push_back(value);
     }
@@ -36,7 +37,7 @@ IntVector::~IntVector() {
 
 void IntVector::push_back(int elem) {
     count++;
-    array[count]=elem;
+    array[count-1]=elem;
     return;
 }
 
@@ -58,7 +59,6 @@ void IntVector::insert(int index, int elem) {
 int IntVector::at(int index) const {
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
-        return 0;
     }
     return array[index];
 }
@@ -113,7 +113,6 @@ void IntVector::operator=(const IntVector& vec) {
     }
 
     capacity = vec.capacity;
-
     count = vec.count;
 
     for(int i = 0; i != count; i++) {
