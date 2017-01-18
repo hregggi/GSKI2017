@@ -71,7 +71,9 @@ int IntVector::size() const {
 }
 
 bool IntVector::empty() const {
-    if (count==0)
+    
+	//Arnór
+	if (count==0)
         return true;
 
     return false;
