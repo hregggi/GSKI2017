@@ -7,11 +7,14 @@ using namespace std;
 
 IntVector::IntVector() {
     array = new int[INITIAL_CAPACITY];
+    count=0;
     capacity = INITIAL_CAPACITY;
 }
 
 IntVector::IntVector(int size, int value) {
     capacity=INITIAL_CAPACITY;
+    array = new int[INITIAL_CAPACITY];
+    count = 0;
 
     for(int i=0; i<size; i++){
         push_back(value);
@@ -35,8 +38,9 @@ IntVector::~IntVector() {
 // Public member functions
 
 void IntVector::push_back(int elem) {
+    array[count]=elem;
     count++;
-    array[count-1]=elem;
+    return;
 }
 
 void IntVector::insert(int index, int elem) {
@@ -57,7 +61,6 @@ void IntVector::insert(int index, int elem) {
 int IntVector::at(int index) const {
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
-        return 0;
     }
     return array[index];
 }
@@ -122,7 +125,7 @@ void IntVector::operator=(const IntVector& vec) {
 int& IntVector::operator[] (int index) {
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
-        return null;
+        //gera eithvað til að skila eingu... tómum pointer?.
     }
 
     return array[index];
