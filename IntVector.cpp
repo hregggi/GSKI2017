@@ -32,7 +32,7 @@ IntVector::IntVector(const IntVector& vec)
 
 
 IntVector::~IntVector() {
-    // TODO: Implement
+    delete[] array;
 }
 
 // Public member functions
