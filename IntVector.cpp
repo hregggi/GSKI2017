@@ -41,10 +41,11 @@ void IntVector::push_back(int elem) {
     array[count]=elem;
     count++;
     return;
+
+
 }
 
 void IntVector::insert(int index, int elem) {
-    int temp;
 
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
