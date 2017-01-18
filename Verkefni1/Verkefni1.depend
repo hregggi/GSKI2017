@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1484752975 source:c:\users\notandi\desktop\gagnaskipan\kóði\github\gski2017\main.cpp
+	<iostream>
+	"IntVector.h"
+
+1484752826 c:\users\notandi\desktop\gagnaskipan\kóði\github\gski2017\intvector.h
+	<iostream>
+
+1484754918 source:c:\users\notandi\desktop\gagnaskipan\kóði\github\gski2017\intvector.cpp
+	<cmath>
+	"IntVector.h"
+

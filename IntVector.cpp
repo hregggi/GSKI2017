@@ -44,7 +44,6 @@ void IntVector::push_back(int elem) {
 }
 
 void IntVector::insert(int index, int elem) {
-    int temp;
 
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
@@ -70,6 +69,9 @@ int IntVector::at(int index) const {
 
 void IntVector::set_value_at(int index, int elem) {
     array[index] = elem;
+    if(index<0 || index>count){
+    throw IndexOutOfRangeException();
+    }
 }
 
 int IntVector::size() const {
