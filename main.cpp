@@ -57,7 +57,7 @@ int main()
     cout << v4 << endl;
 
     cout << "Lets finally try to access an element not in the vector: " << endl;
-	/*
+
     try
     {
         cout << v4.at(50);
@@ -66,6 +66,6 @@ int main()
     {
         cout << "Index out of range!" << endl;
     }
-	*/
+
     return 0;
 }
