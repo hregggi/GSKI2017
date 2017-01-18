@@ -45,7 +45,7 @@ void IntVector::push_back(int elem) {
 
 void IntVector::insert(int index, int elem) {
     if(index<0 || index>count){
-
+//stuff
         throw IndexOutOfRangeException();
 
     }else{
