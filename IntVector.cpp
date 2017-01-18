@@ -6,13 +6,11 @@ using namespace std;
 // Constructors
 
 IntVector::IntVector() {
-    // TODO: Implement
     array = new int[INITIAL_CAPACITY];
     capacity = INITIAL_CAPACITY;
 }
 
 IntVector::IntVector(int size, int value) {
-    // TODO: Implement
     capacity=INITIAL_CAPACITY;
 
     for(int i=0; i<size; i++){
@@ -101,7 +99,8 @@ int IntVector::pop_back() {
 }
 
 void IntVector::clear() {
-    // TODO: Implement
+    count = 0;
+    return;
 }
 
 // Overloaded operators
@@ -121,7 +120,11 @@ void IntVector::operator=(const IntVector& vec) {
 }
 
 int& IntVector::operator[] (int index) {
-    // TODO: Throw exception if index is out of range.
+    if(index<0 || index>count){
+        throw IndexOutOfRangeException();
+        return null;
+    }
+
     return array[index];
 }
 
