@@ -80,12 +80,24 @@ bool IntVector::empty() const {
 }
 
 void IntVector::remove_at(int index) {
-    // TODO: Implement
+    if(index<0 || index>count){
+        throw IndexOutOfRangeException();
+        return;
+    }
+    for(int i=index; i<count; i++){
+        array[i]=array[i+1];
+    }
+    count--;
+    return;
 }
 
 int IntVector::pop_back() {
-    // TODO: Implement
-    return 0;
+    if(empty()){
+        throw EmptyException();
+        return 0;
+    }
+    count--;
+    return array[count+1];
 }
 
 void IntVector::clear() {
