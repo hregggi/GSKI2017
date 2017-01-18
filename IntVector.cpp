@@ -44,15 +44,18 @@ void IntVector::push_back(int elem) {
 }
 
 void IntVector::insert(int index, int elem) {
-    if(index<0 || index>count){
+    int temp;
 
+    if(index<0 || index>count){
         throw IndexOutOfRangeException();
 
     }else{
+        push_back(array[count-1]);
 
-        for(int i=count; i>index; i--){
-            push_back(array[i]);
+        for(int i=count-2; i>index; i--){
+            array[i]=array[i-1];
         }
+        array[index]=elem;
 
     }
     return;
