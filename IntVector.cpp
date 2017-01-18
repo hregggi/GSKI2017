@@ -36,7 +36,8 @@ IntVector::~IntVector() {
 
 void IntVector::push_back(int elem) {
     count++;
-    array[count-1]=elem;
+    array[count]=elem;
+    return;
 }
 
 void IntVector::insert(int index, int elem) {
@@ -112,6 +113,7 @@ void IntVector::operator=(const IntVector& vec) {
     }
 
     capacity = vec.capacity;
+
     count = vec.count;
 
     for(int i = 0; i != count; i++) {
@@ -122,7 +124,7 @@ void IntVector::operator=(const IntVector& vec) {
 int& IntVector::operator[] (int index) {
     if(index<0 || index>count){
         throw IndexOutOfRangeException();
-        return null;
+        //gera eithvað til að skila eingu... tómum pointer?.
     }
 
     return array[index];
