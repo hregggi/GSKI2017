@@ -12,76 +12,78 @@ class EmptyException {};
 
 class IntVector
 {
-	private:
-		// A pointer to an array that stores the vector's values.
-		int* array;
+private:
+    // A pointer to an array that stores the vector's values.
+    int* array;
 
-		// Contains the size of array (i.e. the maximum number of elements
-		// that the vector can store using this array).
-		int  capacity;
+    // Contains the size of array (i.e. the maximum number of elements
+    // that the vector can store using this array).
+    int  capacity;
 
-		// The number of array positions currently holding values.
-		int  count;
+    // The number of array positions currently holding values.
+    int  count;
 
-	public:
-		// Initializes an empty vector.
-		IntVector();
+    void checkSize();
 
-		// Initializes a vector with 'size' copies of the element 'value'.
-		// If 'size' is less than 0, the initalized vector is empty.
-		IntVector(int size, int value = 0);
+public:
+    // Initializes an empty vector.
+    IntVector();
 
-		// A copy constructor.
-		IntVector(const IntVector& vec);
+    // Initializes a vector with 'size' copies of the element 'value'.
+    // If 'size' is less than 0, the initalized vector is empty.
+    IntVector(int size, int value = 0);
 
-		// A Destructor
-        ~IntVector();
+    // A copy constructor.
+    IntVector(const IntVector& vec);
 
-		// Returns the element at position 'index'.
-		// If index is out of range, the function throws
-		// IndexOutOfRangeException.
-		int  at(int index) const;
+    // A Destructor
+    ~IntVector();
 
-		// Sets the value at position 'index' to 'elem'.
-		// If index is out of range, the function throws
-		// IndexOutOfRangeException.
-		void set_value_at(int index, int elem);
+    // Returns the element at position 'index'.
+    // If index is out of range, the function throws
+    // IndexOutOfRangeException.
+    int  at(int index) const;
 
-		// Returns the size of the array.
-		int  size() const;
+    // Sets the value at position 'index' to 'elem'.
+    // If index is out of range, the function throws
+    // IndexOutOfRangeException.
+    void set_value_at(int index, int elem);
 
-		// Returns true if and only if the array contains no elements.
-		bool empty() const;
+    // Returns the size of the array.
+    int  size() const;
 
-		// Appends elem to the vector.
-		void push_back(int elem);
+    // Returns true if and only if the array contains no elements.
+    bool empty() const;
 
-		// Removes the last element of the vector and returns it.
-		// If the vector is empty, the function throws
-		// EmptyException.
-		int  pop_back();
+    // Appends elem to the vector.
+    void push_back(int elem);
 
-		// Inserts 'elem' into the list at position 'index'. All elements to the
-		// right of index are shifted one position to the right.
-		// If index is out of range, the function throws
-		// IndexOutOfRangeException.
-		void insert(int index, int elem);
+    // Removes the last element of the vector and returns it.
+    // If the vector is empty, the function throws
+    // EmptyException.
+    int  pop_back();
 
-		// Removes the element at position 'index'. All elements to the
-		// right of index are shifted one position to the left.
-		// If index is out of range, the function throws
-		// IndexOutOfRangeException.
-		void remove_at(int index);
+    // Inserts 'elem' into the list at position 'index'. All elements to the
+    // right of index are shifted one position to the right.
+    // If index is out of range, the function throws
+    // IndexOutOfRangeException.
+    void insert(int index, int elem);
 
-		// Removes all the elements from the list
-		void clear();
+    // Removes the element at position 'index'. All elements to the
+    // right of index are shifted one position to the left.
+    // If index is out of range, the function throws
+    // IndexOutOfRangeException.
+    void remove_at(int index);
 
-		// Overloaded = operator.
-		void operator=(const IntVector& vec);
-		// Returns a reference to the element at position 'index'.
-		// If index is out of range, the function throws
-		// IndexOutOfRangeException.
-		int& operator[] (int index);
+    // Removes all the elements from the list
+    void clear();
+
+    // Overloaded = operator.
+    void operator=(const IntVector& vec);
+    // Returns a reference to the element at position 'index'.
+    // If index is out of range, the function throws
+    // IndexOutOfRangeException.
+    int& operator[] (int index);
 };
 
 ostream& operator<< (ostream& out, const IntVector& rhs);

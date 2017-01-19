@@ -5,6 +5,9 @@ using namespace std;
 
 int main()
 {
+    for(int i=0; i>-5; i++){
+        cout << " "<< i << endl;
+    }
     IntVector v1, v2(10);
 
     cout << "First vector:" << endl;
@@ -25,6 +28,7 @@ int main()
     {
         v1.push_back(i); // Should result in an expansion of the vector
     }
+
 
     cout << "After adding to the first vector:" << endl;
     cout << v1 << endl;
