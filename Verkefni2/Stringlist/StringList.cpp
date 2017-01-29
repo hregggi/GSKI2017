@@ -10,7 +10,15 @@ StringList::StringList()
 
 StringList::~StringList()
 {
-
+    StringNode *node = NULL;
+    while(node != NULL)
+    {
+        head = node;
+        node = node->next;
+        delete head;
+    }
+    head = NULL;
+    tail = NULL;
 }
 
     // Clear contents from the list, to make it empty.
