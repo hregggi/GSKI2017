@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1446667744 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\main.cpp
+	<iostream>
+
+1485700921 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.cpp
+	"StringList.h"
+
+1464369173 c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.h
+	<iostream>
+	<string>
+	"StringNode.h"
+
+1464369173 c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringnode.h
+	<string>
+

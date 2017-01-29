@@ -1,5 +1,7 @@
 #include "StringList.h"
 
+using namespace std;
+
 StringList::StringList()
 {
 
@@ -107,4 +109,4 @@ const string& StringList::get_value() const
 
     // Outputs the elements of 'lis' to the stream 'outs', separated
     // by a single space.
-friend ostream& operator <<(ostream& outs, const StringList& lis);
+ ostream& operator <<(ostream& outs, const StringList& lis);
