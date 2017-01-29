@@ -4,7 +4,8 @@ using namespace std;
 
 StringList::StringList()
 {
-
+    head = NULL;    //head bendir hvergi
+    tail = NULL;    //tail bendir hvergi
 }
 
 StringList::~StringList()

@@ -81,7 +81,8 @@ class StringList {
 
 
     private:
-        // ??
+        StringNode *head;   //Hausinn, bendir á fyrsta stak listans
+        StringNode *tail;   //Skottið, bendir á síðasta stak listans
 };
 
 
