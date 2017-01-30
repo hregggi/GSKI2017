@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1485794498 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\main.cpp
+1485808286 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\main.cpp
 	<iostream>
 	"StringList.h"
 
-1485794230 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.cpp
+1485808137 source:c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.cpp
 	"StringList.h"
 
-1485789613 c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.h
+1485796113 c:\users\hregg\documents\github\gski2017\verkefni2\stringlist\stringlist.h
 	<iostream>
 	<string>
 	"StringNode.h"
