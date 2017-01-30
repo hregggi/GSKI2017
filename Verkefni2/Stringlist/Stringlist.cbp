@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="StringList.cpp" />
+		<Unit filename="StringList.h" />
+		<Unit filename="StringNode.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

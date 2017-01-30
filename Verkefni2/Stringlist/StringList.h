@@ -81,8 +81,11 @@ class StringList {
 
 
     private:
-        StringNode *head;   //Hausinn, bendir á fyrsta stak listans
-        StringNode *tail;   //Skottið, bendir á síðasta stak listans
+        StringNode *head;    //head, bendir á fyrsta stak listans
+        StringNode *tail;    //tail, bendir á síðasta stak listans
+        StringNode *curr;   //curr, bendir á staðsetningu í listanum
+        int cPos;           // cPos, er staðsetning curr í listanum
+        int sise;           // sise, er stærð listans (já það er vitlaust skrifað)
 };
 
 
